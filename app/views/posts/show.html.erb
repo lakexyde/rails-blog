@@ -8,3 +8,10 @@
 <div class="clear"></div>
 <%= link_to "Edit", edit_post_path(@post) %>
 <%= link_to "delete", @post, method: :delete, data: {confirm: "Are you sure"} %>
+<hr/>
+<div>
+	<%= render @post.comments %>
+</div>
+<div>
+	<%= render "comments/form" %>
+</div>
