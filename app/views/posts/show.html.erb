@@ -1,0 +1,10 @@
+<h1><%= @post.title %></h1>
+<div class="clear"></div>
+<%= @post.created_at %>
+<% if @post.created_at != @post.updated_at %>
+  | <%= time_ago_in_words(@post.updated_at) %> ago
+<% end %>
+<div><%= @post.body %></div>
+<div class="clear"></div>
+<%= link_to "Edit", edit_post_path(@post) %>
+<%= link_to "delete", @post, method: :delete, data: {confirm: "Are you sure"} %>
