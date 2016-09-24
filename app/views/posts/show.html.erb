@@ -2,7 +2,7 @@
 <div class="clear"></div>
 <%= @post.created_at %>
 <% if @post.created_at != @post.updated_at %>
-  | <%= time_ago_in_words(@post.updated_at) %> ago
+  | Updated <%= time_ago_in_words(@post.updated_at) %> ago
 <% end %>
 <div><%= @post.body %></div>
 <div class="clear"></div>
