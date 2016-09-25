@@ -48,11 +48,11 @@ body{
 	}
 	#logo {
 		float: left;
-		margin-left: 5px;
+		margin-left: 10px;
 		width: 30px;
 		height: 30px;
 		padding: 5px;
-		display: inline-block;
+		display: block;
 		
 		a {
 			text-decoration: none;
@@ -77,7 +77,7 @@ body{
 				text-align: center;
 				padding: 5px 0px;
 				&:hover {
-				
+					color: #fff;
 				}
 			}
 		}

@@ -9,10 +9,14 @@
 <body>
 <div class="container">
 <header class="header">
-	<%= link_to image_tag('logo.png'), root_path, id: "logo" %>
+  <div id="logo">
+	<%= link_to root_path do %>
+	  <%= image_tag('logo.png') %>
+	<% end %>
+  </div>
 	<nav id="nav" role="navigation">
 		<ul class="nav">
-			<li><a href="#">About</a></li>
+			<li><%= link_to "About", about_path %></li>
 		</ul>
 	</nav>
 	<div class="control">
