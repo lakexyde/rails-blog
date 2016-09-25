@@ -1,17 +1,22 @@
-<h1><%= @post.title %></h1>
-<div class="clear"></div>
-<%= @post.created_at %>
+<section class="post-page">
+<div class="control">
+	<%= link_to "Edit", edit_post_path(@post) %>	
+</div>
+<h1 class="post-title"><%= @post.title %></h1>	
+<div class="post-meta">
+	<%= @post.created_at %>
 <% if @post.created_at != @post.updated_at %>
   | Updated <%= time_ago_in_words(@post.updated_at) %> ago
-<% end %>
-<div><%= @post.body %></div>
+<% end %> 
+</div>
 <div class="clear"></div>
-<%= link_to "Edit", edit_post_path(@post) %>
-<%= link_to "delete", @post, method: :delete, data: {confirm: "Are you sure"} %>
-<hr/>
-<div>
+<article class="post-body"><%= @post.body %></article>
+<h3 class="comment-head"><%= pluralize(@post.comments.count, "Comment")%></h3>
+<section class="comments-wrapper">
 	<%= render @post.comments %>
-</div>
-<div>
-	<%= render "comments/form" %>
-</div>
+	<div class="comment-form"><%= render "comments/form" %></div>
+</section>	
+</section>
+
+
+

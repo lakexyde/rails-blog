@@ -7,8 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="container">
+<header class="header">
+	<%= link_to image_tag('logo.png'), root_path, id: "logo" %>
+	<nav id="nav" role="navigation">
+		<ul class="nav">
+			<li><a href="#">About</a></li>
+		</ul>
+	</nav>
+	<div class="control">
+	  <%= link_to "New Post", new_post_path(@post) %>
+	</div>
+</header>
+<div class="clear"></div>
+<div id="c-wrapper">
+	<%= yield %>
+</div>
+<footer id="footer">
+	<div class="credit">&copy; 2016  <%= link_to "Rails Blog", root_path %><span id="dev">Olalekan Oladipupo</span><div>
+</footer>
+</div>
 </body>
 </html>

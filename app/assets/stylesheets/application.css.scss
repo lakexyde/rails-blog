@@ -1,0 +1,312 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+$bg : rgba(0, 128, 128, .8);
+body{
+	background: rgba(192, 192, 192, .3);
+	height: 100%;
+	font-size: 15px;
+	}
+.clear:before, .clear:after {
+	content: " ",
+}
+.clear {
+		clear:both;
+		display: table;
+}
+
+.header {
+	display: block;
+	background: $bg;
+	height: 40px;
+	.control {
+		display: block;
+		a {
+			height: 30px;
+			text-decoration: none;
+			color: #fff;
+			float: right;
+			display:block;
+			padding: 10px;
+			font-size: 14px;
+			&:hover {
+				opacity: 0.4;
+			}
+		}
+	}
+	#logo {
+		float: left;
+		margin-left: 5px;
+		width: 30px;
+		height: 30px;
+		padding: 5px;
+		display: inline-block;
+		
+		a {
+			text-decoration: none;
+			color: #fff;	
+		}
+	}
+	#nav ul {
+		float: left;
+		position: absolute;
+		margin-left: 20px;
+    	top: 0px;
+		li {
+			display: inline;
+			a {
+				height: 30px;
+				text-decoration: none;
+				color: #fff;
+				float: right;
+				display:block;
+				font-size: 14px;
+				opacity: 0.4;
+				text-align: center;
+				padding: 5px 0px;
+				&:hover {
+				
+				}
+			}
+		}
+	}
+}
+.container {
+			width: 800px;
+            margin: auto;
+            background: #fff;
+            height: 100%;
+            }
+#c-wrapper {
+	padding: 20px;
+	line-height: 22px;
+}
+.post {
+	padding: 20px 0px;
+	border-bottom: 1px solid #eee;
+	.post-title {
+		margin: 10px 0px;;
+		a {
+			text-decoration: none;
+			color: #008080;
+			font-weight: 200;
+			margin-bottom: 5px;
+			
+		}
+	}
+	.post-meta {
+		color: #999999;
+        font-size: .75em;
+        font-style: italic;
+        margin-bottom: 8px;
+	}
+	.exerpt:before {
+		content: " ";
+	}
+	.exerpt {
+		margin-top: 10px;
+	}
+}
+.post-page {
+	
+	.post-title {
+	    text-decoration: none;
+	    color: #008080;
+		font-weight: 200;
+		margin-top: 0px;
+			
+	}
+	.post-meta {
+		color: #999999;
+        font-size: .75em;
+        font-style: italic;
+        margin-bottom: 8px;
+	}
+	.post-body {
+		margin-top: 10px;
+	}
+	.control a{
+		float: right;
+		text-decoration: none;
+		color: #008080;
+		font-size: 14px;
+	}
+}
+
+.comment-head {
+	background-color: rgba(0, 128, 128, .8);
+	margin-top: 50px;
+	color: #fff;
+	padding: 10px 20px;
+}
+.comments-wrapper {
+	padding: 20px 20px;
+	.comment {
+		padding: 10px 0px 20px 0px;
+        border-bottom: 1px solid #eee;
+        .commenter {
+        	text-transform: uppercase;
+        	color: #008080;
+        	font-weight: 400;
+        	font-size: 14px;
+        }
+        .commenter a {
+        	text-decoration: none;
+        	color: #008080;
+        	&:hover {
+        		color: #008000;
+        	}
+        }
+        .comment-body {
+        	display:block;
+        	overflow: hidden;
+        	
+        }
+        .comment-date {
+        	font-size: 13px;
+        	margin-bottom: 6px;
+        	color: #666;
+        	margin-bottom: 20px;
+        	font-style: italic;
+        }
+        
+        .comment-body:after {
+        	content: " ";
+        	clear: both;
+        	display: table;
+        }
+        .the-comment {
+        	margin-top: 10px;
+        	display:block;
+        	
+        }
+        .comment-control a {
+        	display:block;
+        	float: right;
+        	margin-bottom: 5px;
+        	font-size: 14px;
+        	text-decoration: none;
+        	color: #008080;
+        }
+	}
+	.comment-form {
+		width: 100%;
+		padding: 10px;
+		.new-comment {
+			color: #008080;
+		}
+		input[type="text"], textarea {
+        	width: 90%;
+    		margin: 5em 2% 1em, 0;
+    		display: inline-block;
+    		outline: none;
+    		background: rgba(250, 250, 250, .4);
+    		border: 1px solid #666;
+    		height: 25px;
+    		border-radius: 4px;
+    		padding: .4em 1em;
+		}
+		label {
+			padding: 10px;
+		}
+		input[type="submit"]{
+			background: rgba(0, 128, 128, .6);;
+			outline: none;
+			border: none;
+			height: 30px;
+			border-radius: 4px;
+			width: 20%;
+			display: inline-block;
+			transition: all .4s ease-in-out;
+			cursor: pointer;
+			color: #fff;
+			margin-top:10px;
+			&:hover {
+				background: rgba(0, 128, 0, .8);
+				color: white;
+			}
+		}
+		textarea {
+			height: 200px;
+			margin-top:10px;
+		}
+	}
+}
+#post-form {
+	width: 95%;
+	padding: 10px;
+	margin:auto;
+	input[type="text"], textarea {
+        	width: 90%;
+    		margin: 5em 2% 1em, 0;
+    		display: inline-block;
+    		outline: none;
+    		background: rgba(250, 250, 250, .4);
+    		border: 1px solid #666;
+    		height: 25px;
+    		border-radius: 4px;
+    		padding: .4em 1em;
+		}
+	label {
+			padding: 10px;
+	}
+	input[type="submit"]{
+			background: rgba(0, 128, 128, .6);;
+			outline: none;
+			border: none;
+			height: 30px;
+			border-radius: 4px;
+			width: 20%;
+			display: inline-block;
+			transition: all .4s ease-in-out;
+			cursor: pointer;
+			color: #fff;
+			margin-top:10px;
+			&:hover {
+				background: rgba(0, 128, 0, .8);
+				color: white;
+			}
+		}
+		textarea.post-form-body {
+			height: 500px;
+			margin-top:10px;
+		}
+		textarea.post-form-desc {
+			height: 70px;
+			margin-top: 10px;
+		}
+		::-webkit-input-placeholder {color: #666;}
+}
+#new-post {
+	color: #008080;
+	font-weight: 400;
+	padding: 0 20px;
+	margin: 5px 0px;
+}
+#footer{
+	background: $bg;
+	padding: 20px;
+	font-size: 14px;
+	.credit {
+		color: #ddd;
+		a {
+			text-decoration: none;
+			color: #fff;
+		}
+		#dev {
+			float: right;
+		}
+	}
+}

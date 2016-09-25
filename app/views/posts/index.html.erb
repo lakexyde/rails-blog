@@ -1,8 +1,9 @@
 <% @posts.each do |post|%>
-  <h2><%= link_to post.title, post %></h2>
-  <div><%= post.body %></div>
+  <div class="post">
+	<h2 class="post-title"><%= link_to post.title, post %></h2>
+	<span class="post-meta"><%= post.created_at %></span>
+	<div class="exerpt"><%= post.body.truncate(250) %></div>
+  </div>
 <% end %>
-<div class="clear"></div>
-<div><%= link_to "New", new_post_path %></div>
 
 

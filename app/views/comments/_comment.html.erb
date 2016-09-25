@@ -1,5 +1,17 @@
-<p><%= comment.author%>
-<%= comment.website %>
-<%= comment.content %>
-<%= link_to "Delete", [comment.post, comment], method: :delete, data: {confirm: "Are you fucking sure"} %>
-</p>
+<div class="comment">
+	<span class="commenter">
+		<% if !comment.website.empty? %>
+  		  <%= link_to comment.author, comment.website, rel: "no_follow", target: "_blank" %>
+		<% else %>
+  		  <%= comment.author %>
+		<% end %>
+	</span>
+	<div class="commen-body">
+		<span class="comment-date">Posted <%= time_ago_in_words(comment.created_at) %> ago</span>
+		<div class="clear"></div>
+		<div class="the-comment"><%= comment.content %></div>
+		</div>
+	<span class="comment-control"><%= link_to "Delete", [comment.post, comment], method: :delete, data: {confirm: "Are you sure"} %></span>
+</div>
+
+

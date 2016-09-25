@@ -1,15 +1,13 @@
+<h4 class="new-comment">New Comment</h4>
 <%= form_for([@post, @post.comments.build]) do |f|%>
   <p>
-    <%= f.label :author%>
-    <%= f.text_field :author%>
+    <%= f.text_field :author, placeholder: "Name" %>
   </p>
   <p>
-    <%= f.label :website %>
-    <%= f.text_field :website %>
+    <%= f.text_field :website, placeholder: "Website URL" %>
   </p>
   <p>
-    <%= f.label :content %>
-    <%= f.text_area :content%>
+    <%= f.text_area :content, placeholder: "Comment"%>
   </p>
   <p>
     <%= f.submit %>
