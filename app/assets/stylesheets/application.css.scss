@@ -137,11 +137,13 @@ body{
 	.post-body {
 		margin-top: 10px;
 	}
-	.control a{
+	.control {
 		float: right;
-		text-decoration: none;
-		color: #008080;
-		font-size: 14px;
+	   a {
+			text-decoration: none;
+			color: #008080;
+			font-size: 14px;
+		}
 	}
 }
 
